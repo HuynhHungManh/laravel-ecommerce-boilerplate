@@ -1,0 +1,32 @@
+version: '2'
+services:
+  # container for API
+  api:
+    image: kun391/phpup:3.0
+    ports:
+      - 9000:80
+    depends_on:
+      - database_server
+    volumes:
+      - .:/var/www/app
+    environment:
+      - PHP_MEM_LIMIT=1024M
+  database_server:
+    image: mysql:5.7
+    ports:
+      - 3305:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: arabia
+      MYSQL_USER: arabia_user
+      MYSQL_PASSWORD: arabia123
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 9029:80
+    depends_on:
+      - database_server
+    environment:
+      PMA_HOSTS: database_server
+      PMA_USER: arabia_user
+      PMA_PASSWORD: arabia123
