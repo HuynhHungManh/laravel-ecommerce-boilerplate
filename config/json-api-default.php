@@ -66,7 +66,13 @@ return [
     | `'posts' => App\Post::class`
     */
     'resources' => [
-        // 'posts' => \App\Post::class,
+        'categories' => \Arabia\Category\Models\Category::class,
+        'products' => \Arabia\Product\Models\Product::class,
+        'customers' => \Arabia\Customer\Models\Customer::class,
+        'attributes' => \Arabia\Attribute\Models\Attribute::class,
+        'attribute-families' => \Arabia\Attribute\Models\AttributeFamily::class,
+        'attribute-values' => \Arabia\Attribute\Models\AttributeValue::class,
+        'carts' => \Arabia\Shop\Models\Cart::class,
     ],
 
     /*
@@ -160,7 +166,7 @@ return [
     |
     */
     'encoding' => [
-        'application/vnd.api+json',
+        'application/json',
     ],
 
     /*
@@ -182,7 +188,7 @@ return [
     |
     */
     'decoding' => [
-        'application/vnd.api+json',
+        'application/json',
     ],
 
     /*

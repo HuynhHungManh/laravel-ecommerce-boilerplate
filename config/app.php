@@ -165,6 +165,12 @@ return [
         /*
          * Package Service Providers...
          */
+        Arabia\Category\Providers\CategoryServiceProvider::class,
+        Arabia\Product\Providers\ProductServiceProvider::class,
+        Arabia\Core\Providers\CoreServiceProvider::class,
+        Arabia\Shop\Providers\ShopServiceProvider::class,
+        Arabia\Customer\Providers\CustomerServiceProvider::class,
+        Arabia\Attribute\Providers\AttributeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -175,6 +181,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Repository
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
+        // Package Service Other
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 
     /*
@@ -226,7 +237,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Cart' => Arabia\Shop\Facades\Cart::class,
     ],
 
 ];

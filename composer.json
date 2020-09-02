@@ -14,7 +14,9 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "prettus/l5-repository": "^2.6",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -44,7 +46,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Arabia\\Category\\": "packages/Arabia/Category/src",
+            "Arabia\\Product\\": "packages/Arabia/Product/src",
+            "Arabia\\Core\\": "packages/Arabia/Core/src",
+            "Arabia\\Shop\\": "packages/Arabia/Shop/src",
+            "Arabia\\Customer\\": "packages/Arabia/Customer/src",
+            "Arabia\\Attribute\\": "packages/Arabia/Attribute/src"
         }
     },
     "minimum-stability": "dev",
